@@ -162,9 +162,7 @@ const Login: NextPage = () => {
     );
   }
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Usuário já autenticado
-    </div>
+    <div className="flex h-screen w-screen items-center justify-center"></div>
   );
 };
 
