@@ -39,7 +39,6 @@ const Home: NextPage = () => {
     return () => clearTimeout(delayDebounceFn);
   }, [search]);
 
-  console.log(session);
   if (!contacts?.length) return null;
   return (
     <>

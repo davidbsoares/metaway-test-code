@@ -5,6 +5,8 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/router";
 import Input from "@/components/FormInput";
 import * as yup from "yup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type ErrorsProps = {
   username?: string;
@@ -27,7 +29,7 @@ const Login: NextPage = () => {
     password: yup
       .string()
       .required("Campo obrigatório")
-      .length(8, "A senha deve ter no mínimo 8 caracteres"),
+      .min(8, "A senha deve ter no mínimo 8 caracteres"),
   });
 
   const [form, setForm] = useState<FormProps>({
@@ -41,15 +43,28 @@ const Login: NextPage = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("passou");
     try {
       await loginSchema.validate(form, { abortEarly: false }).then(() => {
         signIn("credentials", {
           username: form.username,
           password: form.password,
           redirect: false,
-        }).catch((err) => {
-          console.log(err);
+        }).then(({ ok, error }) => {
+          if (ok) {
+            router.push("/");
+          } else {
+            console.log(error);
+            toast.error("Login ou senha inválidos", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
+          }
         });
       });
     } catch (err) {
@@ -131,6 +146,18 @@ const Login: NextPage = () => {
             </form>
           </div>
         </div>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
       </>
     );
   }

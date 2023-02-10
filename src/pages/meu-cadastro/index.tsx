@@ -83,8 +83,6 @@ const Profile: NextPage = () => {
     }
   }
 
-  console.log(passwordForm);
-
   async function handleSubmitPaswword(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -119,8 +117,6 @@ const Profile: NextPage = () => {
       );
     }
   }
-
-  console.log(passwordErrors);
 
   useEffect(() => {
     if (session.status === "authenticated") {
