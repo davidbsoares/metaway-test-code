@@ -110,7 +110,7 @@ const PeopleModalEdit = ({
                 Aqui você consegue editar o seu contato
               </DialogPrimitive.Description>
               {passwordFormSent === "sent" ? (
-                <Sent label="Senha trocada!" />
+                <Sent label="Informações Atualizadas!" />
               ) : passwordFormSent === "error" ? (
                 <Error label="Houve um erro ao enviar o formulário" />
               ) : (

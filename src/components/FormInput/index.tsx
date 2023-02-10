@@ -17,7 +17,7 @@ const Input = ({ label, error, ...props }: Props) => {
       <input
         id={label}
         type="text"
-        className="block w-full rounded-md border border-gray-400 text-sm text-gray-700 placeholder:text-gray-500 focus:outline-none focus-visible:border-transparent focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:placeholder:text-gray-600"
+        className="mt-1 block w-full rounded-md border border-gray-400 text-sm text-gray-700 placeholder:text-gray-500 focus:outline-none focus-visible:border-transparent focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:placeholder:text-gray-600"
         {...props}
       />
       {error && <span className="mb-2 text-xs text-red-600">{error}</span>}

@@ -3,6 +3,8 @@ import { type Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 
 import "../styles/globals.css";
+import "react-toastify/dist/ReactToastify.css";
+
 import Navbar from "@/components/Navbar";
 import { useRouter } from "next/router";
 

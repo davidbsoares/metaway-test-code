@@ -113,7 +113,7 @@ const UsersModalEdit = ({ open, setOpen, user, setUser, setUsers }: Props) => {
                 Aqui você consegue editar um usuário
               </DialogPrimitive.Description>
               {passwordFormSent === "sent" ? (
-                <Sent label="Senha trocada!" />
+                <Sent label="Informações alteradas!" />
               ) : passwordFormSent === "error" ? (
                 <Error label="Houve um erro ao enviar o formulário" />
               ) : (

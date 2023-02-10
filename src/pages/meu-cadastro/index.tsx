@@ -155,7 +155,7 @@ const Profile: NextPage = () => {
             <Error label="Houve um erro ao enviar o formulário" />
           ) : (
             <form
-              className="mt-2 flex flex-col flex-wrap"
+              className="mt-2 flex flex-col flex-wrap gap-3"
               onSubmit={handleSubmit}
             >
               <h1 className="mb-4 text-center text-xl">Edite seus Dados</h1>
@@ -255,7 +255,7 @@ const Profile: NextPage = () => {
             <Error label="Houve um erro ao enviar o formulário" />
           ) : (
             <form
-              className="mt-2 flex flex-col flex-wrap"
+              className="mt-2 flex flex-col flex-wrap gap-2"
               onSubmit={handleSubmitPaswword}
             >
               <h1 className="mb-4 text-center text-xl">Troque sua senha</h1>

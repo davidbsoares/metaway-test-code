@@ -9,6 +9,7 @@ import { searchPeople } from "@/services/people";
 import ContactModalAdd from "@/components/Contacts/ModalAdd";
 import ContactModalEdit from "@/components/Contacts/ModalEdit";
 import Search from "@/components/Search";
+import { ToastContainer } from "react-toastify";
 
 const Home: NextPage = () => {
   const session = useSession();

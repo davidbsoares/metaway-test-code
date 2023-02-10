@@ -109,7 +109,7 @@ const UsersModalAdd = ({ open, setOpen, setUser, setUsers }: Props) => {
                 Aqui você consegue adicionar um usuário
               </DialogPrimitive.Description>
               {passwordFormSent === "sent" ? (
-                <Sent label="Senha trocada!" />
+                <Sent label="Usuário adicionado!" />
               ) : passwordFormSent === "error" ? (
                 <Error label="Houve um erro ao enviar o formulário" />
               ) : (

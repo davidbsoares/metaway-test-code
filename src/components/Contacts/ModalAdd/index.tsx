@@ -104,7 +104,7 @@ const ContactModalAdd = ({
                 Aqui você consegue adicionar um contato a uma pessoa
               </DialogPrimitive.Description>
               {passwordFormSent === "sent" ? (
-                <Sent label="Senha trocada!" />
+                <Sent label="Contato adicionado!" />
               ) : passwordFormSent === "error" ? (
                 <Error label="Houve um erro ao enviar o formulário" />
               ) : (

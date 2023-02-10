@@ -95,12 +95,12 @@ const PeopleModalAdd = ({ open, setOpen, setPeople }: Props) => {
                 Aqui você consegue adicionar uma pessoa
               </DialogPrimitive.Description>
               {passwordFormSent === "sent" ? (
-                <Sent label="Senha trocada!" />
+                <Sent label="Usuário Adicionado" />
               ) : passwordFormSent === "error" ? (
                 <Error label="Houve um erro ao enviar o formulário" />
               ) : (
                 <form
-                  className="mt-2 grid grid-flow-row grid-cols-2 gap-5"
+                  className="mt-2 grid grid-cols-2 gap-5"
                   onSubmit={handleSubmit}
                 >
                   <Input

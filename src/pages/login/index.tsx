@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import Input from "@/components/FormInput";
 import * as yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 type ErrorsProps = {
   username?: string;
