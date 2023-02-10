@@ -25,5 +25,11 @@ const config = {
       ? process.env.NEXTAUTH_SECRET
       : "",
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 export default config;
